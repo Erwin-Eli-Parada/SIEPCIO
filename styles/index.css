@@ -67,12 +67,17 @@
     /* margin: 30px 10px 0px 10px; */
 }
 
+.limiteY{
+    max-height: 45vh;
+}
+
 .unica{
     padding: 40px;
 }
 
 .large{
-    max-width: 60%;
+    max-width: 95%;
+    padding: 40px;
 }
 
 .doble{

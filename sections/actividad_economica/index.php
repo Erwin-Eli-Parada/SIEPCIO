@@ -1,7 +1,7 @@
 <?php include("../../bd.php"); ?>
 <?php include("../../templates/header.php"); ?>
 <div class="section unica">
-    <div class="table-responsive">
+    <div class="table-responsive limiteY">
         <table class="table">
             <thead>
                 <tr>
@@ -38,7 +38,7 @@
                         echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["actividad_econom"] . "</td><td>" . $fila["cantidad"] . "</td></tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='4'>No hay datos</td></tr>";
+                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
                 }
                 ?>
                 </tr>

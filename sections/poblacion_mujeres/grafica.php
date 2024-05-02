@@ -45,3 +45,101 @@
         }
     });
 </script>
+<script>
+    const ctx2 = document.getElementById('graficaAEMI');
+    // var data2 = <?php echo json_encode($valorAEMI); ?>.map((valor, index)=>{
+    //     cantidades = <?php echo json_encode($valorCantidadAEMI); ?>;
+    //     return {
+    //         label: valor,
+    //         data: cantidades[index],
+    //         borderWidth: 1
+    //     }
+    // });
+    // console.log(data2);
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($valorAEMI); ?>,
+            // labels: ["Profesión"],
+            // datasets: data
+            datasets: [{
+                label: '# Personas',
+                data: <?php echo json_encode($valorCantidadAEMI); ?>,
+                borderWidth: 1,
+                // backgroundColor: 'rgba(100, 100, 100, 0.1)'
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+                x: {
+                    ticks: {
+                        // display: false //this will remove only the label
+                    }
+                },
+            },
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Actividades económicas realizadas por mujeres autoadscritas indígenas'
+                },
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
+<script>
+    const ctx3 = document.getElementById('graficaAEMA');
+    // var data2 = <?php echo json_encode($valorAEMA); ?>.map((valor, index)=>{
+    //     cantidades = <?php echo json_encode($valorCantidadAEMA); ?>;
+    //     return {
+    //         label: valor,
+    //         data: cantidades[index],
+    //         borderWidth: 1
+    //     }
+    // });
+    // console.log(data2);
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($valorAEMA); ?>,
+            // labels: ["Profesión"],
+            // datasets: data
+            datasets: [{
+                label: '# Personas',
+                data: <?php echo json_encode($valorCantidadAEMA); ?>,
+                borderWidth: 1,
+                // backgroundColor: 'rgba(100, 100, 100, 0.1)'
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+                x: {
+                    ticks: {
+                        // display: false //this will remove only the label
+                    }
+                },
+            },
+            responsive: true,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Actividades económicas realizadas por mujeres autoadscritas afromexicanas'
+                },
+                legend: {
+                    display: false
+                }
+            }
+        }
+    });
+</script>
