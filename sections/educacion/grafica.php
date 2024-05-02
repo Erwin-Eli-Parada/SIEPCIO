@@ -89,3 +89,49 @@
         }
     });
 </script>
+<script>
+    const ctx5 = document.getElementById('graficaCarreraInd');
+    new Chart(ctx5, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($valorCarreraInd); ?>,
+            datasets: [{
+                label: 'Acceso',
+                data: <?php echo json_encode($valorPorcentajeInd3); ?>,
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN INDÍGENA'
+                }
+            }
+        }
+    });
+</script>
+<script>
+    const ctx6 = document.getElementById('graficaCarreraAfro');
+    new Chart(ctx6, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($valorCarreraAfro); ?>,
+            datasets: [{
+                label: 'Acceso',
+                data: <?php echo json_encode($valorPorcentajeAfro3); ?>,
+                borderWidth: 1,
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN AFROMEXICANA'
+                }
+            }
+        }
+    });
+</script>

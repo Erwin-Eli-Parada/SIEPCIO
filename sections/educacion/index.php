@@ -200,6 +200,96 @@
     <div class="section unica">
         <canvas id='graficaTransporteAfro'></canvas>
     </div>
+    <!-- Sección 5 -->
+    <div class="table-responsive limiteY">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN INDÍGENA</th>
+                </tr>
+                <tr>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Carrera</th>
+                    <th scope="col">Porcentaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT nombre_municipio, carrera, porcentaje FROM carrera c JOIN municipio m ON c.clave_mun = m.clave_mun WHERE m.tipo='Indigena'";
+                try {
+                    $resultado = $conexion->query($sql);
+                    // print_r($resultado);
+                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                    // print_r($filas);
+                } catch (Exception $e) {
+                    $e->getMessage();
+                }
+                function carrera($n)
+                {
+                    return ($n["carrera"]);
+                }
+                $valorMunicipioInd3 = array_map("municipio", $filas);
+                $valorCarreraInd = array_map("carrera", $filas);
+                $valorPorcentajeInd3 = array_map("porcentaje", $filas);
+                if (!empty($filas)) {
+                    // Iterar sobre los resultados y mostrarlos en la tabla
+                    foreach ($filas as $fila) {
+                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["carrera"] . "</td><td>" . $fila["porcentaje"] . "</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>No hay datos</td></tr>";
+                }
+                ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section unica">
+        <canvas id='graficaCarreraInd'></canvas>
+    </div>
+    <!-- Sección 6 -->
+    <div class="table-responsive limiteY">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN AFROMEXICANA</th>
+                </tr>
+                <tr>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Carrera</th>
+                    <th scope="col">Porcentaje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT nombre_municipio, carrera, porcentaje FROM carrera c JOIN municipio m ON c.clave_mun = m.clave_mun WHERE m.tipo='Afro'";
+                try {
+                    $resultado = $conexion->query($sql);
+                    // print_r($resultado);
+                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                    // print_r($filas);
+                } catch (Exception $e) {
+                    $e->getMessage();
+                }
+                $valorMunicipioAfro3 = array_map("municipio", $filas);
+                $valorCarreraAfro = array_map("carrera", $filas);
+                $valorPorcentajeAfro3 = array_map("porcentaje", $filas);
+                if (!empty($filas)) {
+                    // Iterar sobre los resultados y mostrarlos en la tabla
+                    foreach ($filas as $fila) {
+                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["carrera"] . "</td><td>" . $fila["porcentaje"] . "</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>No hay datos</td></tr>";
+                }
+                ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section unica">
+        <canvas id='graficaCarreraAfro'></canvas>
+    </div>
 </div>
 <?php include("../../templates/footer.php"); ?>
 <?php include("grafica.php") ?>

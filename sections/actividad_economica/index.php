@@ -15,7 +15,7 @@
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT nombre_municipio, actividad_econom, cantidad FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun";
+                $sql = "SELECT nombre_municipio, actividad_econom, cantidad FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE m.tipo='Indigena'";
                 try {
                     $resultado = $conexion->query($sql);
                     // print_r($resultado);
@@ -48,7 +48,47 @@
     <div class="section large">
         <canvas id='graficaAE'></canvas>
     </div>
-    
+    <div class="table-responsive limiteY">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="6">Actividad económica de las personas que se autoadscriben afromexicanas</th>
+                </tr>
+                <tr>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Actividad económica</th>
+                    <th scope="col">Cantidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT nombre_municipio, actividad_econom, cantidad FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE m.tipo='Afro'";
+                try {
+                    $resultado = $conexion->query($sql);
+                    // print_r($resultado);
+                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                    // print_r($filas);
+                } catch (Exception $e) {
+                    $e->getMessage();
+                }
+                $valorAEA = array_map("actividad_econom", $filas);
+                $valorCantidadA = array_map("cantidad", $filas);
+                if (!empty($filas)) {
+                    // Iterar sobre los resultados y mostrarlos en la tabla
+                    foreach ($filas as $fila) {
+                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["actividad_econom"] . "</td><td>" . $fila["cantidad"] . "</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
+                }
+                ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section large">
+        <canvas id='graficaAEA'></canvas>
+    </div>
 </div>
 <?php include("../../templates/footer.php"); ?>
 <?php include("grafica.php")?>
