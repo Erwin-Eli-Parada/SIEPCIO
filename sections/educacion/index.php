@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DE LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DE LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -60,7 +60,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DE LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DE LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -115,7 +115,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -162,7 +162,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -205,7 +205,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN INDÍGENA</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN INDÍGENA</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -252,7 +252,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN AFROMEXICANA</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN AFROMEXICANA</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>

@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">Actividad económica de las personas que se autoadscriben indígenas</th>
+                    <th class="tablaHeader" colspan="6">Actividad económica de las personas que se autoadscriben indígenas</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -52,7 +52,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">Actividad económica de las personas que se autoadscriben afromexicanas</th>
+                    <th class="tablaHeader" colspan="6">Actividad económica de las personas que se autoadscriben afromexicanas</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>

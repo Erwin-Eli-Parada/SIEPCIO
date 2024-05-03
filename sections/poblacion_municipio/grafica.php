@@ -69,3 +69,32 @@
         }
     });
 </script>
+<script>
+    const ctx3 = document.getElementById('graficaAnalfabeta');
+    console.log(<?php echo json_encode($valorMunicipio); ?>);
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: <?php echo json_encode($valorMunicipio); ?>,
+            datasets: [{
+                label: '# Porcentaje analfabetismo',
+                data: <?php echo json_encode($valorAnalfabetismo); ?>,
+                borderWidth: 1,
+                backgroundColor: "#775B59"
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Porcentaje de población analfabeta'
+                }
+            }
+        }
+    });
+</script>

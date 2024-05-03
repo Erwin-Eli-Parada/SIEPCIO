@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">POBLACIÓN DE MUJERES</th>
+                    <th class="tablaHeader" colspan="6">POBLACIÓN DE MUJERES</th>
                 </tr>
                 <tr>
                     <th scope="col">Localidad</th>
@@ -78,7 +78,7 @@
         <table class="table" >
             <thead>
                 <tr>
-                    <th colspan="6">Actividad económica de las mujeres que se autoadscriben indígenas</th>
+                    <th class="tablaHeader" colspan="6">Actividad económica de las mujeres que se autoadscriben indígenas</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -128,7 +128,7 @@
         <table class="table" >
             <thead>
                 <tr>
-                    <th colspan="6">Actividad económica de las mujeres que se autoadscriben afromexicanas</th>
+                    <th class="tablaHeader" colspan="6">Actividad económica de las mujeres que se autoadscriben afromexicanas</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>

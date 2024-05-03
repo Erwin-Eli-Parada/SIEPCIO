@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">POBLACIÓN INDÍGENA Y AFROMEXICANA POR MUNICIPIO</th>
+                    <th class="tablaHeader" colspan="6">POBLACIÓN INDÍGENA Y AFROMEXICANA POR MUNICIPIO</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -68,7 +68,50 @@
         <canvas id='graficaHM'></canvas>
         <canvas id='myChart'></canvas>
     </div>
-    
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th  class="tablaHeader" colspan="3">PORCENTAJE DE ANALFABETISMO INDÍGENA Y AFROMEXICANA POR MUNICIPIO</th>
+                </tr>
+                <tr>
+                    <th scope="col">Municipio</th>
+                    <th scope="col">Población Analfabeta</th>
+                    <th scope="col">Tipo de municipio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $sql = "SELECT nombre_municipio, analfabetismo, tipo FROM municipio";
+                try {
+                    $resultado = $conexion->query($sql);
+                    // print_r($resultado);
+                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                    // print_r($filas);
+                } catch (Exception $e) {
+                    $e->getMessage();
+                }
+                function analfabetismo($n){
+                    return ($n["analfabetismo"]);
+                }
+                $valorMunicipio = array_map("onlyName", $filas);
+                $valorAnalfabetismo = array_map("analfabetismo", $filas);
+                if (!empty($filas)) {
+                    // Iterar sobre los resultados y mostrarlos en la tabla
+                    foreach ($filas as $fila) {
+                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["analfabetismo"] . "</td><td>" . $fila["tipo"] . "</td></tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
+                }
+                ?>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="section unica">
+        <canvas id='graficaAnalfabeta'></canvas>
+    </div>
 </div>
 <?php include("../../templates/footer.php"); ?>
 <?php include("grafica.php")?>

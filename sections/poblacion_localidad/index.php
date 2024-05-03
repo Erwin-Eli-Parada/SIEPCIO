@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">POBLACIÓN INDÍGENA Y AFROMEXICANA POR LOCALIDAD</th>
+                    <th class="tablaHeader" colspan="6">POBLACIÓN INDÍGENA Y AFROMEXICANA POR LOCALIDAD</th>
                 </tr>
                 <tr>
                     <th scope="col">Localidad</th>
@@ -79,7 +79,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO INDÍGENAS</th>
+                    <th class="tablaHeader" colspan="6">SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO INDÍGENAS</th>
                 </tr>
                 <tr>
                     <th scope="col">Localidad</th>
@@ -142,7 +142,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO AFROMEXICANOS</th>
+                    <th class="tablaHeader" colspan="6">SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO AFROMEXICANOS</th>
                 </tr>
                 <tr>
                     <th scope="col">Localidad</th>

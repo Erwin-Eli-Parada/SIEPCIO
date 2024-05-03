@@ -5,7 +5,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th colspan="6">MUNICIPIOS CON VIOLENCIA DE GÉNERO</th>
+                    <th class="tablaHeader" colspan="6">MUNICIPIOS CON VIOLENCIA DE GÉNERO</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
