@@ -80,7 +80,7 @@
                 label: '# Porcentaje analfabetismo',
                 data: <?php echo json_encode($valorAnalfabetismo); ?>,
                 borderWidth: 1,
-                backgroundColor: "#775B59"
+                backgroundColor: "#A6DB74"
             }]
         },
         options: {

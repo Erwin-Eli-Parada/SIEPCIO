@@ -80,18 +80,22 @@
                 label: '# Viviendas con acceso al servicio de salud',
                 data: <?php echo json_encode($valorass); ?>,
                 borderWidth: 1,
+                backgroundColor: "#DBAB74"
             }, {
                 label: '# Vivendas con acceso a la educación',
                 data: <?php echo json_encode($valorea); ?>,
                 borderWidth: 1,
+                backgroundColor: "#74BCDB"
             }, {
                 label: '# Viviendas habitadas',
                 data: <?php echo json_encode($valorvh); ?>,
                 borderWidth: 1,
+                backgroundColor: "#D274DB"
             }, {
                 label: '# Viviendas habitadas sin servicios basicos',
                 data: <?php echo json_encode($valorvhss); ?>,
                 borderWidth: 1,
+                backgroundColor: "#748186"
             }]
         },
         options: {
@@ -120,18 +124,22 @@
                 label: '# Viviendas con acceso al servicio de salud',
                 data: <?php echo json_encode($valorass2); ?>,
                 borderWidth: 1,
+                backgroundColor: "#DBD170"
             }, {
                 label: '# Vivendas con acceso a la educación',
                 data: <?php echo json_encode($valorea2); ?>,
                 borderWidth: 1,
+                backgroundColor: "#8970DC"
             }, {
                 label: '# Viviendas habitadas',
                 data: <?php echo json_encode($valorvh2); ?>,
                 borderWidth: 1,
+                backgroundColor: "#DB8270"
             }, {
                 label: '# Viviendas habitadas sin servicios basicos',
                 data: <?php echo json_encode($valorvhss2); ?>,
                 borderWidth: 1,
+                backgroundColor: "#495C54"
             }]
         },
         options: {

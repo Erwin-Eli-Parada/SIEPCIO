@@ -115,7 +115,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANSPORTE QUE TOMA LA POBLACIÓN INDÍGENA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>
@@ -162,7 +162,7 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANPSORTE QUE TOMA LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
+                    <th class="tablaHeader" colspan="6">PORCENTAJE DEL TIPO DE TRANSPORTE QUE TOMA LA POBLACIÓN AFROMEXICANA MENOR DE EDAD CON ACCESO A LA EDUCACIÓN</th>
                 </tr>
                 <tr>
                     <th scope="col">Municipio</th>

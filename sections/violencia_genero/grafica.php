@@ -9,6 +9,7 @@
                 label: '# Municipios con violencia de género',
                 data: <?php echo json_encode($numRegion); ?>,
                 borderWidth: 1,
+                backgroundColor: "#D4D69F"
             }]
         },
         options: {

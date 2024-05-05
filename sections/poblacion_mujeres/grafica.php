@@ -66,7 +66,7 @@
                 label: '# Personas',
                 data: <?php echo json_encode($valorCantidadAEMI); ?>,
                 borderWidth: 1,
-                // backgroundColor: 'rgba(100, 100, 100, 0.1)'
+                backgroundColor: "#D6A09F"
             }]
         },
         options: {
@@ -115,7 +115,7 @@
                 label: '# Personas',
                 data: <?php echo json_encode($valorCantidadAEMA); ?>,
                 borderWidth: 1,
-                // backgroundColor: 'rgba(100, 100, 100, 0.1)'
+                backgroundColor: "#9FBED7"
             }]
         },
         options: {
