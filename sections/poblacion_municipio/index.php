@@ -27,22 +27,28 @@
                 } catch (Exception $e) {
                     $e->getMessage();
                 }
-                function onlyName($n){
+                function onlyName($n)
+                {
                     return ($n["nombre_municipio"]);
                 }
-                function onlyfem($n){
+                function onlyfem($n)
+                {
                     return ($n["SUM(poblacion_fem)"]);
                 }
-                function onlyMas($n){
+                function onlyMas($n)
+                {
                     return ($n["SUM(poblacion_mas)"]);
                 }
-                function onlyInd($n){
+                function onlyInd($n)
+                {
                     return ($n["SUM(poblacion_ind)"]);
                 }
-                function onlyAfro($n){
+                function onlyAfro($n)
+                {
                     return ($n["SUM(poblacion_afro)"]);
                 }
-                function pobTotal($n){
+                function pobTotal($n)
+                {
                     return ($n["SUM(poblacion_total)"]);
                 }
                 $valorMunicipio = array_map("onlyName", $filas);
@@ -68,50 +74,65 @@
         <canvas id='graficaHM'></canvas>
         <canvas id='myChart'></canvas>
     </div>
-    <div class="table-responsive">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th  class="tablaHeader" colspan="3">PORCENTAJE DE ANALFABETISMO INDÍGENA Y AFROMEXICANA POR MUNICIPIO</th>
-                </tr>
-                <tr>
-                    <th scope="col">Municipio</th>
-                    <th scope="col">Población Analfabeta</th>
-                    <th scope="col">Tipo de municipio</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $sql = "SELECT nombre_municipio, analfabetismo, tipo FROM municipio";
-                try {
-                    $resultado = $conexion->query($sql);
-                    // print_r($resultado);
-                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
-                    // print_r($filas);
-                } catch (Exception $e) {
-                    $e->getMessage();
-                }
-                function analfabetismo($n){
-                    return ($n["analfabetismo"]);
-                }
-                $valorMunicipio = array_map("onlyName", $filas);
-                $valorAnalfabetismo = array_map("analfabetismo", $filas);
-                if (!empty($filas)) {
-                    // Iterar sobre los resultados y mostrarlos en la tabla
-                    foreach ($filas as $fila) {
-                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["analfabetismo"] . "</td><td>" . $fila["tipo"] . "</td></tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
-                }
-                ?>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="section unica">
-        <canvas id='graficaAnalfabeta'></canvas>
+    <!-- codigo de prueba inicio -->
+    <label for="" class="form-label">Regiones</label>
+    <select id="filtrar">
+        <?php
+        $sql = "SELECT DISTINCT region FROM municipio";
+        try {
+            $resultado = $conexion->query($sql);
+            // print_r($resultado);
+            $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+            // print_r($filas);
+            foreach ($filas as $fila) {
+                echo '<option value="' . $fila["region"] . '">' . $fila["region"] . '</option>';
+            }
+        } catch (Exception $e) {
+            $e->getMessage();
+        }
+        ?>
+    </select>
+    <!-- codigo de prueba fin -->
+    <div id="table-responsive-wrapper">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="tablaHeader" colspan="3">PORCENTAJE DE ANALFABETISMO INDÍGENA Y AFROMEXICANA POR MUNICIPIO</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">Municipio</th>
+                        <th scope="col">Población Analfabeta</th>
+                        <th scope="col">Tipo de municipio</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-table-responsive">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="section unica">
+            <?php
+            $sql = "SELECT nombre_municipio, analfabetismo FROM municipio";
+            try {
+                $resultado = $conexion->query($sql);
+                // print_r($resultado);
+                $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                // print_r($filas);
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+            function analfabetismo($n)
+            {
+                return ($n["analfabetismo"]);
+            }
+            $valorMunicipio2 = array_map("onlyName", $filas);
+            $valorAnalfabetismo2 = array_map("analfabetismo", $filas);
+            ?>
+            <canvas id='graficaAnalfabeta'></canvas>
+        </div>
     </div>
 </div>
 <?php include("../../templates/footer.php"); ?>
-<?php include("grafica.php")?>
+<?php include("grafica.php") ?>
+<?php include("ajax.php"); ?>
