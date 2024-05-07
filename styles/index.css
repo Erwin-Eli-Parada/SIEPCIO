@@ -51,6 +51,22 @@
     padding: 15px 20px;
 }
 
+.selector-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.select-label{
+    font-weight: bold;
+    font-size: large;
+}
+
+.select-size{
+    max-width: 80%;
+}
+
 .tablaHeader{
     text-align:center;
 }

@@ -3,7 +3,7 @@ include("../../bd.php");
 
 if (isset($_POST['nombreRegion'])) {
     $nombreRegion = $_POST['nombreRegion'];
-    print_r($nombreRegion);
+    // print_r($nombreRegion);
     if ($nombreRegion === '') {
         $sql = "SELECT nombre_municipio, analfabetismo, tipo FROM municipio";
     } else {
@@ -19,18 +19,6 @@ if (isset($_POST['nombreRegion'])) {
         $e->getMessage();
         print_r($e);
     }
-    function analfabetismo($n)
-    {
-        return ($n["analfabetismo"]);
-    }
-    function onlyName($n)
-    {
-        return ($n["nombre_municipio"]);
-    }
-    // print_r($filas);
-    $valorMunicipio2 = array_map("onlyName", $filas);
-    print_r($valorMunicipio2);
-    $valorAnalfabetismo2 = array_map("analfabetismo", $filas);
     if (!empty($filas)) {
         // Iterar sobre los resultados y mostrarlos en la tabla
         foreach ($filas as $fila) {
