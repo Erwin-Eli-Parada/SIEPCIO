@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     const ctx = document.getElementById('graficaEducacionInd');
     // console.log(<?php echo json_encode($valorMunicipioInd); ?>);
     // console.log(<?php echo json_encode($valorAsistenciaInd); ?>);
@@ -22,8 +22,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx2 = document.getElementById('graficaEducacionAfro');
     new Chart(ctx2, {
         type: 'pie',
@@ -44,8 +44,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx3 = document.getElementById('graficaTransporteInd');
     new Chart(ctx3, {
         type: 'bar',
@@ -66,8 +66,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx4 = document.getElementById('graficaTransporteAfro');
     new Chart(ctx4, {
         type: 'bar',
@@ -88,7 +88,7 @@
             }
         }
     });
-</script>
+</script> -->
 <script>
     const ctx5 = document.getElementById('graficaCarreraInd');
     new Chart(ctx5, {

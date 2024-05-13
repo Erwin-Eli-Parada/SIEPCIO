@@ -5,7 +5,7 @@ if (isset($_POST['claveMunicipio'])) {
     $claveMunicipio = $_POST['claveMunicipio'];
     // print_r($nombreRegion);
     if ($claveMunicipio === '') {
-        $sql = "SELECT nombre_municipio, actividad_econom, cantidad_m FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE cantidad_m > 0  and m.tipo = \"Indigena\"";
+        $sql = "SELECT actividad_econom, sum(cantidad_m) as cantidad_m FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE cantidad_m > 0  and m.tipo = \"Indigena\" group by actividad_econom";
     } else {
         $sql = "SELECT nombre_municipio, actividad_econom, cantidad_m FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE cantidad_m > 0  and m.clave_mun = $claveMunicipio";
     }
