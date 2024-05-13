@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     const ctx = document.getElementById('graficaFem');
     console.log(<?php echo json_encode($valorLocalidad); ?>);
     new Chart(ctx, {
@@ -44,8 +44,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx2 = document.getElementById('graficaAEMI');
     // var data2 = <?php echo json_encode($valorAEMI); ?>.map((valor, index)=>{
     //     cantidades = <?php echo json_encode($valorCantidadAEMI); ?>;
@@ -93,8 +93,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx3 = document.getElementById('graficaAEMA');
     // var data2 = <?php echo json_encode($valorAEMA); ?>.map((valor, index)=>{
     //     cantidades = <?php echo json_encode($valorCantidadAEMA); ?>;
@@ -142,4 +142,4 @@
             }
         }
     });
-</script>
+</script> -->
