@@ -218,3 +218,115 @@
         cargarTablaTransporteAfro('');
     });
 </script>
+<script>
+    let graficaCarreraInd;
+    $("document").ready(function() {
+
+        $('#filtrarCarreraInd').change(function() {
+            var claveMunicipio = $(this).val();
+            cargarTablaCarreraInd(claveMunicipio);
+            cargarGraficaCarreraInd(claveMunicipio);
+        });
+
+        function cargarTablaCarreraInd(claveMunicipio) {
+            $.ajax({
+                url: 'filtrarTablaCarreraInd.php',
+                method: 'POST',
+                data: {
+                    claveMunicipio: claveMunicipio
+                },
+                success: function(data) {
+                    $('#tbody-table-responsive-carrera-ind').html(data);
+                }
+            });
+        }
+
+        function cargarGraficaCarreraInd(claveMunicipio) {
+            $.ajax({
+                url: 'filtrarGraficaCarreraInd.php',
+                method: 'POST',
+                data: {
+                    claveMunicipio: claveMunicipio
+                },
+                success: function(response) {
+                    console.log(JSON.parse(response));
+                    const ctx5 = document.getElementById('graficaCarreraInd');
+                    if (graficaCarreraInd) {
+                        graficaCarreraInd.destroy();
+                    }
+                    graficaCarreraInd = new Chart(ctx5, {
+                        type: 'bar',
+                        data: JSON.parse(response),
+                        options: {
+                            indexAxis: 'y',
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN INDÍGENA'
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        cargarGraficaCarreraInd('');
+        cargarTablaCarreraInd('');
+    });
+</script>
+<script>
+    let graficaCarreraAfro;
+    $("document").ready(function() {
+
+        $('#filtrarCarreraAfro').change(function() {
+            var claveMunicipio = $(this).val();
+            cargarTablaCarreraAfro(claveMunicipio);
+            cargarGraficaCarreraAfro(claveMunicipio);
+        });
+
+        function cargarTablaCarreraAfro(claveMunicipio) {
+            $.ajax({
+                url: 'filtrarTablaCarreraAfro.php',
+                method: 'POST',
+                data: {
+                    claveMunicipio: claveMunicipio
+                },
+                success: function(data) {
+                    $('#tbody-table-responsive-carrera-afro').html(data);
+                }
+            });
+        }
+
+        function cargarGraficaCarreraAfro(claveMunicipio) {
+            $.ajax({
+                url: 'filtrarGraficaCarreraAfro.php',
+                method: 'POST',
+                data: {
+                    claveMunicipio: claveMunicipio
+                },
+                success: function(response) {
+                    console.log(JSON.parse(response));
+                    const ctx5 = document.getElementById('graficaCarreraAfro');
+                    if (graficaCarreraAfro) {
+                        graficaCarreraAfro.destroy();
+                    }
+                    graficaCarreraAfro = new Chart(ctx5, {
+                        type: 'bar',
+                        data: JSON.parse(response),
+                        options: {
+                            indexAxis: 'y',
+                            plugins: {
+                                title: {
+                                    display: true,
+                                    text: 'PORCENTAJE DEL TIPO DE CARRERA QUE TOMA LA POBLACIÓN AFROMEXICANA'
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        cargarGraficaCarreraAfro('');
+        cargarTablaCarreraAfro('');
+    });
+</script>

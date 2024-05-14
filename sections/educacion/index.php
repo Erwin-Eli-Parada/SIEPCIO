@@ -277,6 +277,26 @@
         <canvas id='graficaTransporteAfro'></canvas>
     </div>
     <!-- Sección 5 -->
+    <div class="selector-wrapper">
+        <label for="filtrarCarreraInd" class="select-label">Municipios:</label>
+        <select id="filtrarCarreraInd" class="form-select select-size shadow-none">
+            <option value="">Todos los municipios</option>
+            <?php
+            $sql = "SELECT clave_mun, nombre_municipio FROM municipio WHERE municipio.tipo = 'Indigena'";
+            try {
+                $resultado = $conexion->query($sql);
+                // print_r($resultado);
+                $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                // print_r($filas);
+                foreach ($filas as $fila) {
+                    echo '<option value="' . $fila["clave_mun"] . '">' . $fila["nombre_municipio"] . '</option>';
+                }
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+            ?>
+        </select>
+    </div>
     <div class="table-responsive limiteY">
         <table class="table">
             <thead>
@@ -289,8 +309,8 @@
                     <th scope="col">Porcentaje</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
+            <tbody id="tbody-table-responsive-carrera-ind">
+                <!-- <?php
                 $sql = "SELECT nombre_municipio, carrera, porcentaje FROM carrera c JOIN municipio m ON c.clave_mun = m.clave_mun WHERE m.tipo='Indigena'";
                 try {
                     $resultado = $conexion->query($sql);
@@ -315,8 +335,7 @@
                 } else {
                     echo "<tr><td colspan='4'>No hay datos</td></tr>";
                 }
-                ?>
-                </tr>
+                ?> -->
             </tbody>
         </table>
     </div>
@@ -324,6 +343,26 @@
         <canvas id='graficaCarreraInd'></canvas>
     </div>
     <!-- Sección 6 -->
+    <div class="selector-wrapper">
+        <label for="filtrarCarreraAfro" class="select-label">Municipios:</label>
+        <select id="filtrarCarreraAfro" class="form-select select-size shadow-none">
+            <option value="">Todos los municipios</option>
+            <?php
+            $sql = "SELECT clave_mun, nombre_municipio FROM municipio WHERE municipio.tipo = 'Afro'";
+            try {
+                $resultado = $conexion->query($sql);
+                // print_r($resultado);
+                $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                // print_r($filas);
+                foreach ($filas as $fila) {
+                    echo '<option value="' . $fila["clave_mun"] . '">' . $fila["nombre_municipio"] . '</option>';
+                }
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+            ?>
+        </select>
+    </div>
     <div class="table-responsive limiteY">
         <table class="table">
             <thead>
@@ -336,8 +375,8 @@
                     <th scope="col">Porcentaje</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
+            <tbody id="tbody-table-responsive-carrera-afro">
+                <!-- <?php
                 $sql = "SELECT nombre_municipio, carrera, porcentaje FROM carrera c JOIN municipio m ON c.clave_mun = m.clave_mun WHERE m.tipo='Afro'";
                 try {
                     $resultado = $conexion->query($sql);
@@ -358,8 +397,7 @@
                 } else {
                     echo "<tr><td colspan='4'>No hay datos</td></tr>";
                 }
-                ?>
-                </tr>
+                ?> -->
             </tbody>
         </table>
     </div>
@@ -369,4 +407,3 @@
 </div>
 <?php include("../../templates/footer.php"); ?>
 <?php include("ajax.php"); ?>
-<?php include("grafica.php") ?>

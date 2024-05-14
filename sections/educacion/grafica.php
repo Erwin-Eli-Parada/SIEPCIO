@@ -89,7 +89,7 @@
         }
     });
 </script> -->
-<script>
+<!-- <script>
     const ctx5 = document.getElementById('graficaCarreraInd');
     new Chart(ctx5, {
         type: 'bar',
@@ -111,7 +111,7 @@
             }
         }
     });
-</script>
+</script> -->
 <script>
     const ctx6 = document.getElementById('graficaCarreraAfro');
     new Chart(ctx6, {
