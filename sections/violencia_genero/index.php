@@ -70,8 +70,10 @@
             </tbody>
         </table>
     </div>
-    <div class="section unica">
-        <canvas id='graficaVG'></canvas>
+    <div style="display:flex; justify-content: center; width: 100%;">
+        <div class="section triple">
+            <canvas id='graficaVG'></canvas>
+        </div>
     </div>
 
 </div>

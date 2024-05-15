@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
     const ctx = document.getElementById('graficaAE');
     var data = <?php echo json_encode($valorAE); ?>.map((valor, index)=>{
         cantidades = <?php echo json_encode($valorCantidad); ?>;
@@ -46,8 +46,8 @@
             }
         }
     });
-</script>
-<script>
+</script> -->
+<!-- <script>
     const ctx2 = document.getElementById('graficaAEA');
     var data = <?php echo json_encode($valorAE); ?>.map((valor, index)=>{
         cantidades = <?php echo json_encode($valorCantidad); ?>;
@@ -95,4 +95,4 @@
             }
         }
     });
-</script>
+</script> -->

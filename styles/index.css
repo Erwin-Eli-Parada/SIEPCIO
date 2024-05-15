@@ -95,6 +95,10 @@
     padding: 40px;
 }
 
+.triple{
+    max-width: 70%;
+}
+
 .large{
     max-width: 95%;
     padding: 40px;

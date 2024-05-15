@@ -1,6 +1,26 @@
 <?php include("../../bd.php"); ?>
 <?php include("../../templates/header.php"); ?>
 <div class="section unica">
+    <div class="selector-wrapper">
+        <label for="filtrarAEI" class="select-label">Municipios:</label>
+        <select id="filtrarAEI" class="form-select select-size shadow-none">
+            <option value="">Todos los municipios</option>
+            <?php
+            $sql = "SELECT clave_mun, nombre_municipio FROM municipio WHERE municipio.tipo = 'Indigena'";
+            try {
+                $resultado = $conexion->query($sql);
+                // print_r($resultado);
+                $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                // print_r($filas);
+                foreach ($filas as $fila) {
+                    echo '<option value="' . $fila["clave_mun"] . '">' . $fila["nombre_municipio"] . '</option>';
+                }
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+            ?>
+        </select>
+    </div>
     <div class="table-responsive limiteY">
         <table class="table">
             <thead>
@@ -13,40 +33,34 @@
                     <th scope="col">Cantidad</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                $sql = "SELECT nombre_municipio, actividad_econom, cantidad FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE m.tipo='Indigena'";
-                try {
-                    $resultado = $conexion->query($sql);
-                    // print_r($resultado);
-                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
-                    // print_r($filas);
-                } catch (Exception $e) {
-                    $e->getMessage();
-                }
-                function actividad_econom($n){
-                    return ($n["actividad_econom"]);
-                }
-                function cantidad($n){
-                    return ($n["cantidad"]);
-                }
-                $valorAE = array_map("actividad_econom", $filas);
-                $valorCantidad = array_map("cantidad", $filas);
-                if (!empty($filas)) {
-                    // Iterar sobre los resultados y mostrarlos en la tabla
-                    foreach ($filas as $fila) {
-                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["actividad_econom"] . "</td><td>" . $fila["cantidad"] . "</td></tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
-                }
-                ?>
-                </tr>
+            <tbody id="tbody-table-responsive-AEI">
+                
             </tbody>
         </table>
     </div>
     <div class="section large">
-        <canvas id='graficaAE'></canvas>
+        <canvas id='graficaAEI'></canvas>
+    </div>
+    <!-- Seccion 2 -->
+    <div class="selector-wrapper">
+        <label for="filtrarAEA" class="select-label">Municipios:</label>
+        <select id="filtrarAEA" class="form-select select-size shadow-none">
+            <option value="">Todos los municipios</option>
+            <?php
+            $sql = "SELECT clave_mun, nombre_municipio FROM municipio WHERE municipio.tipo = 'Afro'";
+            try {
+                $resultado = $conexion->query($sql);
+                // print_r($resultado);
+                $filas = $resultado->fetch_all(MYSQLI_ASSOC);
+                // print_r($filas);
+                foreach ($filas as $fila) {
+                    echo '<option value="' . $fila["clave_mun"] . '">' . $fila["nombre_municipio"] . '</option>';
+                }
+            } catch (Exception $e) {
+                $e->getMessage();
+            }
+            ?>
+        </select>
     </div>
     <div class="table-responsive limiteY">
         <table class="table">
@@ -60,29 +74,8 @@
                     <th scope="col">Cantidad</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                $sql = "SELECT nombre_municipio, actividad_econom, cantidad FROM act_economica ae JOIN municipio m ON ae.clave_mun = m.clave_mun WHERE m.tipo='Afro'";
-                try {
-                    $resultado = $conexion->query($sql);
-                    // print_r($resultado);
-                    $filas = $resultado->fetch_all(MYSQLI_ASSOC);
-                    // print_r($filas);
-                } catch (Exception $e) {
-                    $e->getMessage();
-                }
-                $valorAEA = array_map("actividad_econom", $filas);
-                $valorCantidadA = array_map("cantidad", $filas);
-                if (!empty($filas)) {
-                    // Iterar sobre los resultados y mostrarlos en la tabla
-                    foreach ($filas as $fila) {
-                        echo "<tr><td>" . $fila["nombre_municipio"] . "</td><td>" . $fila["actividad_econom"] . "</td><td>" . $fila["cantidad"] . "</td></tr>";
-                    }
-                } else {
-                    echo "<tr><td colspan='3'>No hay datos</td></tr>";
-                }
-                ?>
-                </tr>
+            <tbody id="tbody-table-responsive-AEA">
+                
             </tbody>
         </table>
     </div>
@@ -91,4 +84,4 @@
     </div>
 </div>
 <?php include("../../templates/footer.php"); ?>
-<?php include("grafica.php")?>
+<?php include("ajax.php"); ?>
