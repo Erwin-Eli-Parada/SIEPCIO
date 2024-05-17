@@ -80,7 +80,7 @@
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: 'Población Autoadscrita Indigena y Afromexicanal'
+                                    text: 'Población Autoadscrita Indígena y Afromexicana'
                                 }
                             }
                         }
@@ -141,7 +141,7 @@
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: 'SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO INDÍGENAS'
+                                    text: 'SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIONES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO INDÍGENAS'
                                 }
                             }
                         }
@@ -201,7 +201,7 @@
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: 'SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIÓNES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO AFROMEXICANOS'
+                                    text: 'SITUACIÓN ECONÓMICA, SALUD Y VIVIENDA DE POBLACIONES EN MUNICIPIOS QUE SE AUTOADSCRIBEN COMO AFROMEXICANOS'
                                 }
                             }
                         }

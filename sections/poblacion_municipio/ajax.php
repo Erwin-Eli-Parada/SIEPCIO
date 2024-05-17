@@ -142,7 +142,7 @@
                             plugins: {
                                 title: {
                                     display: true,
-                                    text: 'Población Autoadscrita Indigena y Afromexicanal'
+                                    text: 'Población Autoadscrita Indígena y Afromexicana'
                                 }
                             }
                         }
