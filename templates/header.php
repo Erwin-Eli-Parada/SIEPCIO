@@ -15,6 +15,7 @@ $url_base = "http://localhost/SIE/";
     <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <link href="<?php echo $url_base ?>styles/index.css" rel="stylesheet">
+    <link href="<?php echo $url_base ?>styles/block.css" rel="stylesheet">
     <link rel="shortcut icon" href="<?php echo $url_base; ?>src/img/Logo_SIPCIA.png" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />

@@ -37,7 +37,7 @@ if (isset($_POST['nombreRegion'])) {
             array('label'=>'# Porcentaje analfabetismo',
             'data'=>$valorAnalfabetismo2, 
             'borderWidth'=>1,
-            'backgroundColor'=>"#A6DB74"
+            'backgroundColor'=>"#D88373"
         )));
     echo json_encode($data);
     

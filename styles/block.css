@@ -1,0 +1,9 @@
+.agrupar{
+    display: flex;
+    gap: 10px;
+}
+
+.element-group{
+    margin-bottom: 10px;
+    max-width: 50%;
+}
