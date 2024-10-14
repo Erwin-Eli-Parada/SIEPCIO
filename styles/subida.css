@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px 30px 50px;
+    align-items: center;
+    background-color: #911D44;
+}
+
+.header div{
+    color: wheat;
+    font-size: xx-large;
+    font-weight: bolder;
+    max-width: 15%;
+}
+
+.header h1{
+    color: wheat;
+    font-weight: 900;
+    max-width: 50%;
+    text-align: center;
+}
+
+.header a{
+    color: wheat;
+    font-size: x-large;
+    font-weight: bolder;
+    max-width: 30%;
+    min-width: 10%;
+}
+
+.cuerpo{
+    padding: 20px;
+}
+
+.dataContainerTitle{
+    display: flex;
+    align-items: center;
+}
+
+.dataContainerTitle hr{
+    width: 40%;
+}
+
+.dataTitle{
+    width: 20%;
+    text-align: center;
+}

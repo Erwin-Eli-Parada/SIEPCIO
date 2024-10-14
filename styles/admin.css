@@ -1,0 +1,68 @@
+.bodyFormat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #911D44;
+}
+
+.formContainer{
+    background-color: #B4905E;
+    text-wrap: wrap;
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 5px black;
+}
+
+.titleForm{
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* .logoWrapper{
+    width: 80%;
+    max-height: 100px;
+} */
+
+.imagen{
+    width: 400px;
+    /* height: 100px; */
+    max-width: 400px;
+    object-fit: scale-down;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.inputWrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputLabel{
+    font-weight: bold;
+    color:wheat;
+}
+
+.input{
+    border-radius: 5px;
+    border:none;
+    padding: 8px;
+}
+
+.buttonWrapper{
+    width: 50%;
+}
+
+.buttonWrapper button{
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #0A91D3;
+    border: none;
+    box-shadow: 2px 2px 4px black;
+}
