@@ -34,24 +34,58 @@ if ($usuarioA != "SI") {
     <div class="dataContainer">
         <div class="dataContainerTitle">
             <hr>
-            <div class="dataTitle">Subir datos relacionados con el municipio</div>
+            <div class="dataTitle">SUBIR DATOS RELACIONADOS CON LOS MUNICIPIOS</div>
             <hr>
         </div>
         <div class="dataContainerFormatoTitle">FORMATO:</div>
-        <table class="dataContainerFormato">
-            <tr>
-                <td>clave_num</td>
-                <td>nombre_municipio</td>
-                <td>region</td>
-                <td>pais</td>
-                <td>estado</td>
-                <td>violencia_genero</td>
-                <td>analfabetismo</td>
-                <td>tipo</td>
-                <td>lengua</td>
-            </tr>
-        </table>
-        <form class="formulario" action="post_importar_csv.php" method="POST" enctype="multipart/form-data">
+        <div class="dataContainerFormatoWrapper">
+            <table class="dataContainerFormato">
+                <tr>
+                    <td>clave_num</td>
+                    <td>nombre_municipio</td>
+                    <td>region</td>
+                    <td>pais</td>
+                    <td>estado</td>
+                    <td>violencia_genero</td>
+                    <td>analfabetismo</td>
+                    <td>tipo</td>
+                    <td>lengua</td>
+                </tr>
+            </table>
+        </div>
+        <form class="formulario" action="post_municipio_csv.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="archivo">Selecciona un archivo <code>.csv</code></label>
+                <input type="file" class="form-control" name="archivo" id="archivo" accept=".csv" required>
+            </div>
+            <button class="btn btn-success" type="submit">Importar</button>
+        </form>
+    </div>
+    <div class="dataContainer">
+        <div class="dataContainerTitle">
+            <hr>
+            <div class="dataTitle">SUBIR DATOS RELACIONADOS CON LAS LOCALIDADES</div>
+            <hr>
+        </div>
+        <div class="dataContainerFormatoTitle">FORMATO:</div>
+        <div class="dataContainerFormatoWrapper">
+            <table class="dataContainerFormato">
+                <tr>
+                    <td>clave_loc</td>
+                    <td>nombre_localidad</td>
+                    <td>poblacion_total</td>
+                    <td>poblacion_afro</td>
+                    <td>numero_hablantes</td>
+                    <td>clave_mun</td>
+                    <td>altitud</td>
+                    <td>longitud</td>
+                    <td>latitud</td>
+                    <td>poblacion_fem</td>
+                    <td>poblacion_mas</td>
+                </tr>
+            </table>
+        </div>
+        <form class="formulario" action="" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="archivo">Selecciona un archivo <code>.csv</code></label>
                 <input type="file" class="form-control" name="archivo" id="archivo" accept=".csv" required>

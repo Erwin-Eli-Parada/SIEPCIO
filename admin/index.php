@@ -28,6 +28,9 @@ $url_base = "http://localhost/SIE/";
         <div class="logoWrapper">
             <img src="../src/img/Logo_SIPCIA_2.png" class="imagen" alt="Responsive image">
         </div>
+        <span style="color:<?php echo isset($_GET["errorusuario"]) ? ($_GET["errorusuario"]== "SI" ? "#911D44" : "wheat") : "wheat" ?>;">
+            <?php echo isset($_GET["errorusuario"]) ? ($_GET["errorusuario"]== "SI" ? "Datos incorrectos" : "Ingrese sus Datos") : "Ingrese sus Datos" ?>
+        </span>
         <div class="inputWrapper">
             <div class="inputLabel">CORREO:</div>
             <input id="email" name="email" class="input" type="email">

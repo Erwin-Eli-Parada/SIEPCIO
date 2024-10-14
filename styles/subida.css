@@ -45,3 +45,24 @@
     width: 20%;
     text-align: center;
 }
+
+.dataContainerFormatoWrapper{
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.dataContainerFormato{
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.dataContainerFormato td{
+    border: gray 3px solid;
+    text-align: center;
+}
+
+.mb-3 label{
+    margin-bottom: 8px;
+}
+

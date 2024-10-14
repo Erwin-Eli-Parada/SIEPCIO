@@ -58,7 +58,7 @@ try {
     }
 
     // print_r("Insertados: " . $inserted);
-    header("Location: subida.php?municipio=true&inserted=" . $inserted);
+    header("Location: subida.php?municipio=true&total=".$total."&inserted=".$inserted."&errors=".$errors);
 } catch (Exception $e) {
     print_r($e);
     // header("Location: login.php");

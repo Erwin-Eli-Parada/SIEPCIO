@@ -22,7 +22,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         $_SESSION['usuarioA']="SI";
         header("Location: subida.php");
     } else {
-        header("Location: index.php");
+        header("Location: index.php?errorusuario=SI");
     }
 }
 ?>
