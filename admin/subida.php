@@ -85,7 +85,7 @@ if ($usuarioA != "SI") {
                 </tr>
             </table>
         </div>
-        <form class="formulario" action="" method="POST" enctype="multipart/form-data">
+        <form class="formulario" action="post_localidad_csv.php" method="POST" enctype="multipart/form-data">
             <div class="mb-3">
                 <label for="archivo">Selecciona un archivo <code>.csv</code></label>
                 <input type="file" class="form-control" name="archivo" id="archivo" accept=".csv" required>
