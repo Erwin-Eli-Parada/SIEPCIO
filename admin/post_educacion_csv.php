@@ -37,23 +37,23 @@ try {
     foreach ($rows as $r) {
         $data =
             [
-                'id_carrera' => $r[0],
-                'carrera' => $r[1],
+                'id_educacion' => $r[0],
+                'asistencia' => $r[1],
                 'porcentaje' => $r[2],
                 'clave_mun' => $r[3]
             ];
 
         // print_r($data);
-        $sql = "INSERT INTO carrera (idcarrera, carrera, porcentaje, clave_mun) 
-            VALUES (" . $data['id_carrera'] . ",'" . $data['carrera'] . "'," . $data['porcentaje'] . "," . $data['clave_mun'] . ") 
-            ON DUPLICATE KEY UPDATE carrera= '" . $data['carrera'] . "', porcentaje = " . $data['porcentaje'] . ", clave_mun = " . $data['clave_mun'];
+        $sql = "INSERT INTO educacion (id_educacion, asistencia, porcentaje, clave_mun) 
+            VALUES (" . $data['id_educacion'] . ",'" . $data['asistencia'] . "'," . $data['porcentaje'] . "," . $data['clave_mun'] . ") 
+            ON DUPLICATE KEY UPDATE asistencia= '" . $data['asistencia'] . "', porcentaje = " . $data['porcentaje'] . ", clave_mun = " . $data['clave_mun'];
         $resultado = $conexion->query($sql);
 
         $inserted++;
     }
 
     // print_r("Insertados: " . $inserted);
-    header("Location: subida.php?carrera=true&total=".$total."&inserted=".$inserted."&errors=".$errors);
+    header("Location: subida.php?educacion=true&total=".$total."&inserted=".$inserted."&errors=".$errors);
 } catch (Exception $e) {
     print_r($e);
     // header("Location: login.php");
