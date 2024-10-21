@@ -37,18 +37,16 @@ try {
     foreach ($rows as $r) {
         $data =
             [
-                'id_actividad_econom' => $r[0],
-                'cantidad' => $r[1],
-                'actividad_econom' => $r[2],
-                'clave_mun' => $r[3],
-                'cantidad_h' => $r[4],
-                'cantidad_m' => $r[5],
+                'id_carrera' => $r[0],
+                'carrera' => $r[1],
+                'porcentaje' => $r[2],
+                'clave_mun' => $r[3]
             ];
 
         // print_r($data);
-        $sql = "INSERT INTO act_economica (id_act_econom, cantidad, actividad_econom, clave_mun, cantidad_h, cantidad_m) 
-            VALUES (" . $data['id_actividad_econom'] . "," . $data['cantidad'] . ",'" . $data['actividad_econom'] . "'," . $data['clave_mun'] . "," . $data['cantidad_h'] . "," . $data['cantidad_m'] . ") 
-            ON DUPLICATE KEY UPDATE cantidad= " . $data['cantidad'] . ", actividad_econom = '" . $data['actividad_econom'] . "', clave_mun = " . $data['clave_mun'] . ", cantidad_h = " . $data['cantidad_h'] . ", cantidad_m = " . $data['cantidad_m'];
+        $sql = "INSERT INTO carrera (idcarrera, carrera, porcentaje, clave_mun) 
+            VALUES (" . $data['id_carrera'] . ",'" . $data['carrera'] . "'," . $data['porcentaje'] . "," . $data['clave_mun'] . ") 
+            ON DUPLICATE KEY UPDATE carrera= '" . $data['carrera'] . "', porcentaje = " . $data['porcentaje'] . ", clave_mun = " . $data['clave_mun'];
         $resultado = $conexion->query($sql);
 
         $inserted++;

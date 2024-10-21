@@ -120,6 +120,31 @@ if ($usuarioA != "SI") {
             <button class="btn btn-success" type="submit">Importar</button>
         </form>
     </div>
+    <div class="dataContainer">
+        <div class="dataContainerTitle">
+            <hr>
+            <div class="dataTitle">SUBIR DATOS RELACIONADOS CON LAS CARRERAS</div>
+            <hr>
+        </div>
+        <div class="dataContainerFormatoTitle">FORMATO:</div>
+        <div class="dataContainerFormatoWrapper">
+            <table class="dataContainerFormato">
+                <tr>
+                    <td>id_carrera</td>
+                    <td>carrera</td>
+                    <td>porcentaje</td>
+                    <td>clave_mun</td>
+                </tr>
+            </table>
+        </div>
+        <form class="formulario" action="post_carrera_csv.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="archivo">Selecciona un archivo <code>.csv</code></label>
+                <input type="file" class="form-control" name="archivo" id="archivo" accept=".csv" required>
+            </div>
+            <button class="btn btn-success" type="submit">Importar</button>
+        </form>
+    </div>
     
 </div>
 
