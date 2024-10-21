@@ -93,6 +93,34 @@ if ($usuarioA != "SI") {
             <button class="btn btn-success" type="submit">Importar</button>
         </form>
     </div>
+    <div class="dataContainer">
+        <div class="dataContainerTitle">
+            <hr>
+            <div class="dataTitle">SUBIR DATOS RELACIONADOS CON LA ACTIVIDAD ECONÓMICA</div>
+            <hr>
+        </div>
+        <div class="dataContainerFormatoTitle">FORMATO:</div>
+        <div class="dataContainerFormatoWrapper">
+            <table class="dataContainerFormato">
+                <tr>
+                    <td>id_actividad_econom</td>
+                    <td>cantidad</td>
+                    <td>actividad_econom</td>
+                    <td>clave_mun</td>
+                    <td>cantidad_h</td>
+                    <td>cantidad_m</td>
+                </tr>
+            </table>
+        </div>
+        <form class="formulario" action="post_economico_csv.php" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="archivo">Selecciona un archivo <code>.csv</code></label>
+                <input type="file" class="form-control" name="archivo" id="archivo" accept=".csv" required>
+            </div>
+            <button class="btn btn-success" type="submit">Importar</button>
+        </form>
+    </div>
+    
 </div>
 
 </html>
